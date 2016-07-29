@@ -12,8 +12,7 @@ env.user = SSH_USER
 
 @task
 def prepare_deploy():
-    local("git add .")
-    local("git commit")
+    local("git add . && git commit")
     local("git push origin master")
 
 
